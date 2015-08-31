@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html ng-app='ideas'>
+  <head>
+    <meta charset="utf-8" />
+    <title>Unblocky</title>
+<!--     <link rel="stylesheet" type="text/css" href="styles/style.css"/> -->
+  </head>
+  <body>
+    <h1>Unblocky</h1>
+    <!-- the ng-view directive is where our templates will be loaded into when navigated to -->
+
+  <form name="form" ng-controller='queryController' ng-submit=addQuery(query)>
+    <input type="radio" name="research-area" value="work">Work<br>
+    <input type="radio" name="research-area" value="School">School<br>
+    <input type="radio" name="research-area" value="Play">Play<br>
+    <input type="text" name="research-question"><br>
+  <input type='submit' value='Submit'>
+  </form>
+<div ng-view>
+</div>
+
+<script src="node_modules/angular/angular.js"></script>
+<script src="node_modules/angular-route/angular-route.js"></script>
+
+<script src="query.js"></script>
+<script src="requestHandler.js"></script>
+<script src="app.js"></script>
+  
+  </body>
+</html>

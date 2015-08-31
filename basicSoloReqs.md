@@ -23,14 +23,14 @@ display basic searches, expand on questions, apologize for failed searches, cong
 
 ToDo:
 
--set up basic server 12-12:30
--read Google API docs 12:30 - 1pm 
--set up Google API  2-3pm
--set up OAuth 3-4pm
--set up app search 4-430
--set up DB 430 -5pm
--set up client and DB cnnection 5-6pm
-
+-set up environment 12-1230 X
+-set up basic server 130 - 2pm 
+-read Google API docs 2-3pm
+-set up Googple API 3-4
+-set up OAuth 4-5pm
+-set up app search 5-530
+-set up DB 630-700
+-set up client and DB cnnection 7-8pm
 
 
 

@@ -1,0 +1,59 @@
+{
+  "name": "ideas",
+  "version": "1.0.0",
+  "description": "ideas",
+  "main": "index.js",
+  "dependencies": {
+    "angular": "^1.4.5",
+    "angular-mocks": "^1.4.5",
+    "angular-route": "^1.4.5",
+    "bcrypt-nodejs": "^0.0.3",
+    "bluebird": "^1.0.8",
+    "body-parser": "^1.13.3",
+    "bookshelf": "^0.6.12",
+    "bower": "^1.5.2",
+    "chai": "^1.10.0",
+    "ejs": "^0.8.8",
+    "express": "^4.13.3",
+    "express-generator": "^4.13.1",
+    "express-partials": "^0.2.0",
+    "express-session": "^1.11.3",
+    "forever": "^0.10.11",
+    "generator-angular": "^0.12.1",
+    "generator-karma": "^1.0.0",
+    "jquery": "^2.1.4",
+    "jwt-simple": "^0.3.1",
+    "knex": "^0.5.16",
+    "mongoose": "^4.1.4",
+    "morgan": "^1.6.1",
+    "nodemon": "^1.4.1",
+    "passport": "^0.3.0",
+    "passport-local": "^1.0.0",
+    "q": "^1.4.1",
+    "request": "^2.61.0",
+    "sqlite3": "^3.0.5",
+    "underscore": "^1.8.3",
+    "yo": "^1.4.7"
+  },
+  "devDependencies": {
+    "mocha": "^1.21.5"
+  },
+  "scripts": {
+    "test": "mocha",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/juandsierra82/MKS-solo.git"
+  },
+  "keywords": [
+    "idea",
+    "search"
+  ],
+  "author": "me",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/juandsierra82/MKS-solo/issues"
+  },
+  "homepage": "https://github.com/juandsierra82/MKS-solo#readme"
+}
