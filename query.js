@@ -38,7 +38,7 @@ var addQuery = function(query){
 
 .controller('innerHTML', function ($scope) {
 	$scope.myHTML = 
-	'I am an <b>BOLD</b> string ' + '<a href="#">links!</a> and stuff!';
+	"<gcse:searchbox gname='storesearch'></gcse:searchbox>";
 
 })
 
