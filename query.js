@@ -23,24 +23,24 @@ var addQuery = function(query){
 })
 
 //calls postrequest from indexhtml
-.controller('queryController', function ($scope, $location, QueryHandler){
+.controller('queryController', function ($scope, $location, $sce, QueryHandler){
 
 	$scope.data= {};
 	$scope.addQuery = function(data){
 		QueryHandler.addQuery(data)
 		.then(function(data){
 			console.log('called addQuery', data, $scope.data)
+			var trusted = $sce.trustAsHtml('<gcse:searchbox gname="storesearch" webSearchQueryAddition='+$scope.data.area+'></gcse:searchbox>'+'<br>'+'<gcse:searchresults gname="storesearch"></gcse:searchresults>');
 
+			$scope.myHTML = trusted;
 		});
 	};
+console.log('radio: '+ $scope.data.area);
+
+
 
 })
 
-.controller('innerHTML', function ($scope) {
-	$scope.myHTML = 
-	"<gcse:searchbox gname='storesearch'></gcse:searchbox>";
-
-})
 
 //sets up router
 .config(function ($routeProvider) {
