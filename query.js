@@ -1,4 +1,4 @@
-angular.module('query', ['query.requestHandler'], 'ngRoute')
+angular.module('query', [], 'ngRoute')
 
 
 .config(function ($routeProvider) {
@@ -9,7 +9,7 @@ angular.module('query', ['query.requestHandler'], 'ngRoute')
 		})
 })
 
-.controller('queryController', function ($scope, QueryHandler){
+.controller('queryController', function ($scope){
 
 	$scope.query = {};
 	$scope.addQuery = function(query){
@@ -21,5 +21,22 @@ angular.module('query', ['query.requestHandler'], 'ngRoute')
 		});
 	};
 
+})
 
+.factory('QueryHandler', function($http){
+
+var addQuery = function(question){
+return $http({
+	method: 'POST',
+	url: '/',
+	data: question
+}).then(function(resp){
+	console.log('queried', question)
+	return resp.data;
+})
+}
+
+return {
+	addQuery: addQuery
+}
 })

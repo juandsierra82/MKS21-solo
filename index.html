@@ -5,19 +5,18 @@
     <title>Unblocky</title>
 <!--     <link rel="stylesheet" type="text/css" href="styles/style.css"/> -->
   </head>
-  <body>
+  <body ng-app="query">
     <h1>Unblocky</h1>
     <!-- the ng-view directive is where our templates will be loaded into when navigated to -->
 
-  <form name="queryForm" ng-controller="query" ng-submit="addQuery(query)">
+  <form name="queryForm" ng-controller='queryController' ng-submit="addQuery(query)">
     <input type="radio" value="work">Work<br>
-    <input type="radio" value="School">School<br>
-    <input type="radio"  value="Play">Play<br>
-    <input type="text" name="research-question"><br>
+    <input type="radio" value="school">School<br>
+    <input type="radio"  value="play">Play<br>
+    <input type="text"><br>
   <input type='submit' value='Submit'>
   </form>
-<div ng-view>
-</div>
+
 
 <script src="node_modules/angular/angular.js"></script>
 <script src="node_modules/angular-route/angular-route.js"></script>
