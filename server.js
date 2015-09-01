@@ -7,7 +7,7 @@ var app = express();
 
 app.use(express.static(__dirname + '/'))
 
-app.post('/index', function(req, res){
+app.post('/', function(req, res){
 	console.log('hello')
 	res.send('Hello World!')
 })

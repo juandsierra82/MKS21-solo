@@ -5,7 +5,7 @@ angular.module('ideas.requestHandler', [])
 var addQuery = function(question){
 return $http({
 	method: 'POST',
-	url: '/api/index',
+	url: '/',
 	data: question
 }).then(function(resp){
 	console.log('queried')
