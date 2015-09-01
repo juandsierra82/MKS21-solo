@@ -20,22 +20,22 @@
 <pre> area = {{ data.area }}</pre>
 <pre> text = {{ data.text }}</pre>
 <pre> data = {{data | json}}</pre>
-<gcse:searchbox gname="storesearch" webSearchQueryAddition="black"></gcse:searchbox>
-<gcse:searchresults gname="storesearch"></gcse:searchresults>
-</div>
 <div ng-controller="innerHTML">
 <p ng-bind-html="myHTML"></p>
 </div> 
+<gcse:searchbox gname="storesearch" webSearchQueryAddition="black"></gcse:searchbox>
+<gcse:searchresults gname="storesearch"></gcse:searchresults>
+</div>
 
 
-
+<script type="text/javascript" src="https://apis.google.com/js/api.js?onload=onApiLoad"></script>
 
 <script src="node_modules/angular/angular.js"></script>
 <script src="node_modules/angular-route/angular-route.js"></script>
-<script src="node_modules/angular-sanitize/angular-sanitize.js">
+<script src="node_modules/angular-sanitize/angular-sanitize.js"></script>
 <script src="search.js"></script>
 
-<script type="text/javascript" src="https://apis.google.com/js/api.js?onload=onApiLoad"></script>
+
 <script src="query.js"></script>
 
   
