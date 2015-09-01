@@ -31,12 +31,10 @@ var addQuery = function(query){
 		.then(function(data){
 			console.log('called addQuery', data, $scope.data)
 			var trusted = $sce.trustAsHtml('<gcse:searchbox gname="storesearch" webSearchQueryAddition='+$scope.data.area+'></gcse:searchbox>'+'<br>'+'<gcse:searchresults gname="storesearch"></gcse:searchresults>');
-
 			$scope.myHTML = trusted;
+			console.log('value of bound scope', trusted)
 		});
 	};
-console.log('radio: '+ $scope.data.area);
-
 
 
 })
