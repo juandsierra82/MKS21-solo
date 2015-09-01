@@ -16,7 +16,7 @@ var addQuery = function(question){
 								return resp.data
 							})
 	}		
-
+	//returns post request as a method
 	return {
 		addQuery: addQuery
 	}
@@ -25,12 +25,12 @@ var addQuery = function(question){
 //calls postrequest from indexhtml
 .controller('queryController', function ($scope, $location, QueryHandler){
 
-	$scope.query = {};
+	$scope.data= {};
 	$scope.addQuery = function(query){
 		QueryHandler.addQuery(query)
 		.then(function(data){
 			console.log('called addQuery', query)
-			$scope.data.queries = data;
+			$scope.data.query = data;
 
 		});
 	};
