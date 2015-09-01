@@ -5,13 +5,12 @@ var port = 8080;
 
 var app = express();
 
+app.use(express.static(__dirname + '/'))
 
-app.get('/', function(req, res){
-
-	res.send('Hello World')
-
-});
-
+app.post('/index', function(req, res){
+	console.log('hello')
+	res.send('Hello World!')
+})
 app.listen(port);
 
 console.log('listening on port' + port)
