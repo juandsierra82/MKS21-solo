@@ -1,4 +1,4 @@
-angular.module('query.requestHandler', [])
+angular.module('query', ['ngRoute'])
 
 .factory('QueryHandler', function($http){
 

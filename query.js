@@ -1,6 +1,6 @@
-angular.module('query', [], 'ngRoute')
+angular.module('query', ['ngRoute'])
 
-
+//sets up router
 .config(function ($routeProvider) {
 	$routeProvider
 		.when('/', {
@@ -9,20 +9,7 @@ angular.module('query', [], 'ngRoute')
 		})
 })
 
-.controller('queryController', function ($scope){
-
-	$scope.query = {};
-	$scope.addQuery = function(query){
-		QueryHandler.addQuery(query)
-		.then(function(data){
-			console.log('called addQuery', query)
-			$scope.data.queries = data;
-
-		});
-	};
-
-})
-
+//sets up POST request
 .factory('QueryHandler', function($http){
 
 var addQuery = function(question){
@@ -39,4 +26,19 @@ return $http({
 return {
 	addQuery: addQuery
 }
+})
+
+//calls postrequest from indexhtml
+.controller('queryController', function ($scope){
+
+	$scope.query = {};
+	$scope.addQuery = function(query){
+		QueryHandler.addQuery(query)
+		.then(function(data){
+			console.log('called addQuery', query)
+			$scope.data.queries = data;
+
+		});
+	};
+
 })
