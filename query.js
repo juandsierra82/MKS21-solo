@@ -1,4 +1,4 @@
-angular.module('query', ['ngRoute'])
+angular.module('query', ['ngRoute', 'ngSanitize'])
 
 
 //sets up POST request
@@ -33,6 +33,12 @@ var addQuery = function(query){
 
 		});
 	};
+
+})
+
+.controller('innerHTML', function ($scope) {
+	$scope.myHTML = 
+	'I am an <b>BOLD</b> string ' + '<a href="#">links!</a> and stuff!';
 
 })
 

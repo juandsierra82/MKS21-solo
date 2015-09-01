@@ -7,22 +7,34 @@
   </head>
   <body ng-app="query">
     <h1>Goo...</h1>
-    <h3>...for those to lazy to say ...gle</h3>
+    <h3>...for those too lazy to say ...gle</h3>
     <!-- the ng-view directive is where our templates will be loaded into when navigated to -->
-  <form ng-submit="addQuery(data)" ng-controller="queryController">
+  <div ng-controller="queryController">
+  <form novalidate class="myForm">
    <input type="radio" ng-model="data.area" value="work">Work<br>
     <input type="radio" ng-model="data.area" value="school">School<br>
     <input type="radio"  ng-model="data.area" value="play">Play<br> 
-  <input type="text" ng-model="data.text"><br>
-  <input type='submit' value='Submit'>
+    <input type="text" ng-model="data.text">
+    <input type='submit' ng-click="addQuery(data)" value='Submit'>
   </form>
-  <pre>{{text}}</pre>
+<pre> area = {{ data.area }}</pre>
+<pre> text = {{ data.text }}</pre>
+<pre> data = {{data | json}}</pre>
+<gcse:searchbox gname="storesearch" webSearchQueryAddition="black"></gcse:searchbox>
+<gcse:searchresults gname="storesearch"></gcse:searchresults>
+</div>
+<div ng-controller="innerHTML">
+<p ng-bind-html="myHTML"></p>
+</div> 
+
+
 
 
 <script src="node_modules/angular/angular.js"></script>
 <script src="node_modules/angular-route/angular-route.js"></script>
+<script src="node_modules/angular-sanitize/angular-sanitize.js">
+<script src="search.js"></script>
 
-<script src="GoogleSearch.js"></script>
 <script type="text/javascript" src="https://apis.google.com/js/api.js?onload=onApiLoad"></script>
 <script src="query.js"></script>
 
