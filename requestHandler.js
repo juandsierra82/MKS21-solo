@@ -1,4 +1,4 @@
-angular.module('ideas.requestHandler', [])
+angular.module('query.requestHandler', [])
 
 .factory('QueryHandler', function($http){
 
@@ -8,7 +8,7 @@ return $http({
 	url: '/',
 	data: question
 }).then(function(resp){
-	console.log('queried')
+	console.log('queried', question)
 	return resp.data;
 })
 }

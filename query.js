@@ -1,15 +1,25 @@
-angular.module('ideas.query', [])
+angular.module('query', ['query.requestHandler'], 'ngRoute')
 
 
-.controller('queryController', function($scope, $location, QueryHandler){
+.config(function ($routeProvider) {
+	$routeProvider
+		.when('/', {
+			templateUrl: 'index.html',
+			controller: 'queryController'
+		})
+})
+
+.controller('queryController', function ($scope, QueryHandler){
 
 	$scope.query = {};
 	$scope.addQuery = function(query){
-		QueryHandler.addQuery(query).then(function(data){
+		QueryHandler.addQuery(query)
+		.then(function(data){
 			console.log('called addQuery', query)
 			$scope.data.queries = data;
 
 		});
 	};
 
-});
+
+})

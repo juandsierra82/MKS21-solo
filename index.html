@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html ng-app='ideas'>
+<html>
   <head>
     <meta charset="utf-8" />
     <title>Unblocky</title>
@@ -9,10 +9,10 @@
     <h1>Unblocky</h1>
     <!-- the ng-view directive is where our templates will be loaded into when navigated to -->
 
-  <form name="form" ng-controller='queryController' ng-submit=addQuery(query)>
-    <input type="radio" name="research-area" value="work">Work<br>
-    <input type="radio" name="research-area" value="School">School<br>
-    <input type="radio" name="research-area" value="Play">Play<br>
+  <form name="queryForm" ng-controller="query" ng-submit="addQuery(query)">
+    <input type="radio" value="work">Work<br>
+    <input type="radio" value="School">School<br>
+    <input type="radio"  value="Play">Play<br>
     <input type="text" name="research-question"><br>
   <input type='submit' value='Submit'>
   </form>
@@ -24,7 +24,7 @@
 
 <script src="query.js"></script>
 <script src="requestHandler.js"></script>
-<script src="app.js"></script>
+
   
   </body>
 </html>
