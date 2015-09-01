@@ -8,8 +8,8 @@ var app = express();
 app.use(express.static(__dirname + '/'))
 
 app.post('/', function(req, res){
-	console.log('hello')
-	res.send('Hello World!')
+	res.send('Hello World')
+	console.log('Server pinged', req.body)
 })
 app.listen(port);
 

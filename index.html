@@ -8,21 +8,20 @@
   <body ng-app="query">
     <h1>Unblocky</h1>
     <!-- the ng-view directive is where our templates will be loaded into when navigated to -->
-
-  <form name="form" ng-submit="addQuery(query)">
-    <input type="radio" value="work">Work<br>
-    <input type="radio" value="school">School<br>
-    <input type="radio"  value="play">Play<br>
-    <input type="text" ng-model="query.text"><br>
+  <form ng-submit="addQuery(data)" ng-controller="queryController">
+   <input type="radio" ng-model="data.area" value="work">Work<br>
+    <input type="radio" ng-model="data.area" value="school">School<br>
+    <input type="radio"  ng-model="data.area" value="play">Play<br> 
+  <input type="text" ng-model="data.text"><br>
   <input type='submit' value='Submit'>
   </form>
-  {{$scope.addQuery(query.text)}}
+  <pre>{{text}}</pre>
+
 
 <script src="node_modules/angular/angular.js"></script>
 <script src="node_modules/angular-route/angular-route.js"></script>
 
 <script src="query.js"></script>
-<script src="requestHandler.js"></script>
 
   
   </body>

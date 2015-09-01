@@ -4,15 +4,15 @@ angular.module('query', ['ngRoute'])
 //sets up POST request
 .factory('QueryHandler', function ($http){
 
-var addQuery = function(question){
+var addQuery = function(query){
 
 	return $http({
 								method: 'POST',
 								url: '/',
-								data: question
+								data: query
 							})
 							.then(function (resp) {
-								console.log('queried', question);
+								console.log('queried', resp.data);
 								return resp.data
 							})
 	}		
@@ -26,11 +26,10 @@ var addQuery = function(question){
 .controller('queryController', function ($scope, $location, QueryHandler){
 
 	$scope.data= {};
-	$scope.addQuery = function(query){
-		QueryHandler.addQuery(query)
+	$scope.addQuery = function(data){
+		QueryHandler.addQuery(data)
 		.then(function(data){
-			console.log('called addQuery', query)
-			$scope.data.query = data;
+			console.log('called addQuery', data, $scope.data)
 
 		});
 	};
@@ -47,4 +46,3 @@ var addQuery = function(question){
 		console.log('router set up')
 })
 
-console.log('angular!')
