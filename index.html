@@ -22,21 +22,21 @@
     <pre> text = {{ data.text }}</pre>
     <pre> data = {{data | json}}</pre>
 <!-- sample bind: check for variable binding to HTML -->
-    <div ng-bind-html="myHTML"></div>
-<!--       <gcse:searchbox gname="storesearch" webSearchQueryAddition="black"></gcse:searchbox>
+ 
+    <div ng-bind-html="myHtml"></div>
+ <!--      <gcse:searchbox gname="storesearch" webSearchQueryAddition="black"></gcse:searchbox>
       <gcse:searchresults gname="storesearch"></gcse:searchresults> -->
-</div>
+   </div>
 
 <!-- script loading Google Search engine query; self loading cannot come after sanitize -->
 
-<script type="text/javascript" src="https://apis.google.com/js/api.js?onload=onApiLoad"></script>
 
 <!-- angular models; route required to upload config; sanitize for HTML insertion -->
 
 <script src="node_modules/angular/angular.js"></script>
 <script src="node_modules/angular-route/angular-route.js"></script>
 <script src="node_modules/angular-sanitize/angular-sanitize.js"></script>
-<script src="search.js"></script>
+<!-- <script src="search.js"></script> -->
 
 <!-- form controller -->
 
