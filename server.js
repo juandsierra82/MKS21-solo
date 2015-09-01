@@ -9,7 +9,7 @@ app.use(express.static(__dirname + '/'))
 
 app.post('/', function(req, res){
 	res.send('Hello World')
-	console.log('Server pinged', req.body)
+	console.log('Server pinged')
 })
 app.listen(port);
 

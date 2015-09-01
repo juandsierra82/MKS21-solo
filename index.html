@@ -2,11 +2,12 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <title>Unblocky</title>
+    <title>Goo</title>
 <!--     <link rel="stylesheet" type="text/css" href="styles/style.css"/> -->
   </head>
   <body ng-app="query">
-    <h1>Unblocky</h1>
+    <h1>Goo...</h1>
+    <h3>...for those to lazy to say ...gle</h3>
     <!-- the ng-view directive is where our templates will be loaded into when navigated to -->
   <form ng-submit="addQuery(data)" ng-controller="queryController">
    <input type="radio" ng-model="data.area" value="work">Work<br>
@@ -21,6 +22,8 @@
 <script src="node_modules/angular/angular.js"></script>
 <script src="node_modules/angular-route/angular-route.js"></script>
 
+<script src="GoogleSearch.js"></script>
+<script type="text/javascript" src="https://apis.google.com/js/api.js?onload=onApiLoad"></script>
 <script src="query.js"></script>
 
   
