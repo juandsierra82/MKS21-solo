@@ -9,14 +9,14 @@
     <h1>Unblocky</h1>
     <!-- the ng-view directive is where our templates will be loaded into when navigated to -->
 
-  <form name="queryForm" ng-controller='queryController' ng-submit="addQuery(query)">
+  <form name="form" ng-submit="addQuery(query)">
     <input type="radio" value="work">Work<br>
     <input type="radio" value="school">School<br>
     <input type="radio"  value="play">Play<br>
-    <input type="text"><br>
+    <input type="text" ng-model="query.text"><br>
   <input type='submit' value='Submit'>
   </form>
-
+  {{$scope.addQuery(query.text)}}
 
 <script src="node_modules/angular/angular.js"></script>
 <script src="node_modules/angular-route/angular-route.js"></script>
